@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+// import * as THREE from 'three';
 // import easing from './easing.js';
 import metaversefile from 'metaversefile';
 const {useApp, useFrame, useScene, useActivate, useChatManager, useLoreAI, getNextInstanceId, useLoaders, usePhysics, useCleanup} = metaversefile;
@@ -27,7 +27,7 @@ ${otLore}
 
 Here are some prophecies the origin tablets have generated:
 
--`
+-`;
 
 export default () => {
   const app = useApp();
