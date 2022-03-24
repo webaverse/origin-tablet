@@ -74,14 +74,16 @@ export default () => {
     pillarApp = metaversefile.createApp({
       name: u,
     });
+    app.add(pillarApp);
+    pillarApp.updateMatrixWorld();
+    
     pillarApp.instanceId = getNextInstanceId();
-    pillarApp.position.copy(app.position);
+    /* pillarApp.position.copy(app.position);
     pillarApp.quaternion.copy(app.quaternion);
     pillarApp.scale.copy(app.scale);
-    pillarApp.updateMatrixWorld();
+    pillarApp.updateMatrixWorld(); */
     pillarApp.setComponent('physics', true);
     await pillarApp.addModule(m);
-    scene.add(pillarApp);
   })();
 
   app.getPhysicsObjects = () => pillarApp ? pillarApp.getPhysicsObjects() : [];
